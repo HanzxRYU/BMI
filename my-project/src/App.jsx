@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 function App() {
   const [weight, setWeight] = useState("");
@@ -72,7 +74,7 @@ function App() {
             />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -91,6 +93,18 @@ function App() {
             >
               <span className="text-lg">↺</span> Reset
             </motion.button>
+
+            <Link to={"/Detail"}>
+            <motion.button
+              whileHover={{ scale: 1.05, }}
+              whileTap={{ scale: 0.95 }}
+              type="button"
+              className="w-full bg-emerald-500 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-emerald-600 transition flex items-center justify-center p-2"
+              >
+              <span className="text-lg"></span> Detail Halaman
+            </motion.button>
+              </Link>
+            
           </div>
         </motion.form>
 
